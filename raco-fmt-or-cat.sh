@@ -2,7 +2,7 @@
 
 # This script is a workaround to compensate for `raco fmt`'s absence of standard output when it finds an error in the
 # program it tries to format, which otherwise makes it difficult to use it as a standard filter program in editors or
-# for pipeline composition. It works by simply outputting its input to standard out if `raco fmt` returns and error
+# for pipeline composition. It works by simply outputting its input to standard out if `raco fmt` returns an error
 # code. That is achieved by first redirecting standard input to a temporary file, which is then passed to `raco fmt`,
 # and then, if the latter returned an error code, simply to `cat`.
 
